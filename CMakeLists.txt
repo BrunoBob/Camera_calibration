@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( Camera_Calibration )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( Camera_Calibration src/main.cpp )
+target_link_libraries( Camera_Calibration ${OpenCV_LIBS} )

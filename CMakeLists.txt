@@ -19,4 +19,5 @@ add_executable(
     ${VIEW_DIR}/viewer.cpp
 )
 
-target_link_libraries( Camera_Calibration ${OpenCV_LIBS})
+target_link_libraries(Camera_Calibration ${OpenCV_LIBS})
+target_compile_features(Camera_Calibration PRIVATE cxx_std_17)

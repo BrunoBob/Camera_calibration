@@ -23,11 +23,14 @@ int main(int argc, char** argv)
 
     Camera camera;
     Viewer viewer;
+
+    viewer.set_image(image);
     
     Calibrator calibrator(viewer, camera);
 
-    viewer.set_image(image);
-    viewer.display_camera();
+    calibrator.launch_display();
+    //viewer.set_image(image);
+    //viewer.display_camera();
 
     return 0;
 }

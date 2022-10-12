@@ -63,12 +63,46 @@ void Calibrator::calibration(){
     std::vector<cv::Point2f> imagePoints = this->viewer.get_corner_points();
     Mat rotation_vector, translation_vector, rotation_matrix, rotation_matrix_T ;
     Mat camera_position;
+    Vec3d camera_orientation;
 
     solvePnP(objectPoints,imagePoints,intrisic_parameter,distorsion_parameter,rotation_vector,translation_vector);
     Rodrigues(rotation_vector, rotation_matrix);
     transpose(rotation_matrix, rotation_matrix_T);
 
     camera_position = -rotation_matrix_T * translation_vector;
+    this->compute_orientation(rotation_matrix, camera_orientation);
     
-    std::cout << camera_position << std::endl;
+    std::cout << "Camera position : X = " <<  camera_position.at<double>(0,0)
+    << " | Y = " << camera_position.at<double>(0,1) 
+    << " | Z = " << camera_position.at<double>(0,2) << std::endl;
+
+    std::cout << "Camera orientation : Yaw = " <<  camera_orientation[1]
+    << " | Pitch = " << camera_orientation[0] 
+    << " | Roll = " << camera_orientation[2] << std::endl;
+}
+
+/*!
+     *  \brief Compute the orientation of the camera
+     *
+     *  Compute the euler's angles of the camera orientation
+     * 
+     *  \param rotation_matrix : The rotation matrix of the camera
+     *  \param orientation : Output orientation of the camera (yaw, pitch an roll)
+     *
+     */
+void Calibrator::compute_orientation(Mat rotation_matrix, Vec3d &orientation){
+    Mat camera_matrix, ext_rotation_matrix, translation_vector, rotation_matrix_X, rotation_matrix_Y, rotation_matrix_Z;
+    double* ptr_rotation_matrix = rotation_matrix.ptr<double>();
+    double projMatrix[12] = {ptr_rotation_matrix[0],ptr_rotation_matrix[1],ptr_rotation_matrix[2],0,
+                          ptr_rotation_matrix[3],ptr_rotation_matrix[4],ptr_rotation_matrix[5],0,
+                          ptr_rotation_matrix[6],ptr_rotation_matrix[7],ptr_rotation_matrix[8],0};
+
+    decomposeProjectionMatrix( Mat(3,4,CV_64FC1,projMatrix),
+                               camera_matrix,
+                               ext_rotation_matrix,
+                               translation_vector,
+                               rotation_matrix_X,
+                               rotation_matrix_Y,
+                               rotation_matrix_Z,
+                               orientation);
 }

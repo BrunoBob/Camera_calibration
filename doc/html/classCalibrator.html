@@ -86,6 +86,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd0c0a81131f19d5c2152e3bd3f44897"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalibrator.html#acd0c0a81131f19d5c2152e3bd3f44897">calibration</a> ()</td></tr>
 <tr class="memdesc:acd0c0a81131f19d5c2152e3bd3f44897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the position of the camera.  <a href="classCalibrator.html#acd0c0a81131f19d5c2152e3bd3f44897">More...</a><br /></td></tr>
 <tr class="separator:acd0c0a81131f19d5c2152e3bd3f44897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ebcc57ac030278d45757ead67f0c88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalibrator.html#aa5ebcc57ac030278d45757ead67f0c88">compute_orientation</a> (Mat rotation_matrix, Vec3d &amp;orientation)</td></tr>
+<tr class="memdesc:aa5ebcc57ac030278d45757ead67f0c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the orientation of the camera.  <a href="classCalibrator.html#aa5ebcc57ac030278d45757ead67f0c88">More...</a><br /></td></tr>
+<tr class="separator:aa5ebcc57ac030278d45757ead67f0c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that exchange with the <a class="el" href="classViewer.html" title="Class that manage the graphical part of the sofware.">Viewer</a> and the Model (<a class="el" href="classCamera.html" title="Class that manage the data of the software.">Camera</a>) to compute the position of the camera. </p>
@@ -140,6 +143,44 @@ Public Member Functions</h2></td></tr>
 
 <p>Compute the position of the camera. </p>
 <p>Ask to the <a class="el" href="classViewer.html" title="Class that manage the graphical part of the sofware.">Viewer</a> the position of the chosen calibration points and to the <a class="el" href="classCamera.html" title="Class that manage the data of the software.">Camera</a> the intrisic parameter end the distorsion of the camera Then it compute the position of the camera in the real world </p>
+
+</div>
+</div>
+<a id="aa5ebcc57ac030278d45757ead67f0c88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ebcc57ac030278d45757ead67f0c88">&#9670;&nbsp;</a></span>compute_orientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Calibrator::compute_orientation </td>
+          <td>(</td>
+          <td class="paramtype">Mat&#160;</td>
+          <td class="paramname"><em>rotation_matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vec3d &amp;&#160;</td>
+          <td class="paramname"><em>orientation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the orientation of the camera. </p>
+<p>Compute the euler's angles of the camera orientation</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotation_matrix</td><td>: The rotation matrix of the camera </td></tr>
+    <tr><td class="paramname">orientation</td><td>: Output orientation of the camera (yaw, pitch an roll) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

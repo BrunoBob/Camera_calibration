@@ -6,5 +6,6 @@ var searchData=
   ['calibrator_2eh_4',['calibrator.h',['../calibrator_8h.html',1,'']]],
   ['camera_5',['Camera',['../classCamera.html',1,'Camera'],['../classCamera.html#a01f94c3543f56ede7af49dc778f19331',1,'Camera::Camera()']]],
   ['camera_2ecpp_6',['camera.cpp',['../camera_8cpp.html',1,'']]],
-  ['camera_2eh_7',['camera.h',['../camera_8h.html',1,'']]]
+  ['camera_2eh_7',['camera.h',['../camera_8h.html',1,'']]],
+  ['compute_5forientation_8',['compute_orientation',['../classCalibrator.html#aa5ebcc57ac030278d45757ead67f0c88',1,'Calibrator']]]
 ];

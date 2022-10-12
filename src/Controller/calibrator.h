@@ -31,6 +31,7 @@ class Calibrator{
         
         void launch_display();
         void calibration();
+        void compute_orientation(Mat rotation_matrix, Vec3d &orientation);
         
 };
 

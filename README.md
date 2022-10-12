@@ -32,6 +32,12 @@ If you want to compute the camera position : press the 'c' key on your keyboard.
 If you want to reset the selected corners : press the 'r' key in your keyboard.  
 If you want to leave the software : press the 'esc' key in your keyboard.
 
+The result of the camera position computation will be displayed in the terminal.    
+The axes of references of the world coordinates are based on the chosen points, the origin being the first chosen point.    
+
+This picture show you how the real axes are determined ( the paper is at 0 on the Z axe) :  
+
+![axes_representation](img/axes.jpg "Representation of real world x and y axes")
 ## Documentation
 
 The doxygen documentation is generated in the doc folder.  

@@ -99,6 +99,7 @@ std::vector<Point2f> Viewer::get_corner_points(){
 void Viewer::reset_corners_points(){
     this->checkBoard_corners = {{0,0},{0,0},{0,0},{0,0}};
     this->cpt_click = 0;
+    //Reset displayed image with original image 
     this->image_calibration = this->original_image_calibration.clone();
     imshow("Camera_calibration", this->original_image_calibration);
 }

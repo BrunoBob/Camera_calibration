@@ -19,9 +19,9 @@ Camera::Camera(){
 }
 
 /*!
-     * \brief Return a matrix of the intrisic parameter of the camera
+     * \brief Return a matrix of the intrisic parameters of the camera
      *
-     * \return The instrisic parameter of the camera
+     * \return The instrisic parameters of the camera
      *
      */
 Mat Camera::get_intrisic_parameter(){
@@ -30,9 +30,9 @@ Mat Camera::get_intrisic_parameter(){
 }
 
 /*!
-     * \brief Return a matrix of the distorsion parameter of the camera
+     * \brief Return a matrix of the distorsion parameters of the camera
      *
-     * \return The distorsion parameter of the camera
+     * \return The distorsion parameters of the camera
      *
      */
 Mat Camera::get_distorsion_parameter(){

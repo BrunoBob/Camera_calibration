@@ -1,12 +1,11 @@
-# Camera_calibration
+# Camera calibration
 
 This is a software made for a recruitment test.  
 The goal is to have a program that take as input an image with a calibration A4 paper in it.  
-The user can then click on the 4 corner of the paper and the programm will compute the position of the camera in the real worl coordinate by using the camera parameter.  
+The user can then click on the 4 corner of the paper and the programm will compute the position of the camera in the real world coordinate by using the camera parameters.  
 
 ## Installation 
 ### Requirement
-* C++17
 * opencv
 * cmake
 * gtest
@@ -50,7 +49,7 @@ If you want to update the documentation you can regenerate it with the command :
 After each commit a github action will create a correct environment and it will try to compile the code and run the tests.  
 You can check the **Actions** of the depository too see the CI in more details.  
 
-TO run the test manually you can run the following command :  
+To run the test manually you can run the following command :  
 
     mkdir build
     cd build
@@ -62,3 +61,4 @@ TO run the test manually you can run the following command :
 
 * Function to compute the correct order of the corners so that the user can click on them in any order
 * Draw the X and Y real world axes on the window
+* Show results on the displayed window

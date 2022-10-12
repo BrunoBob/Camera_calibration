@@ -27,7 +27,7 @@ Calibrator::Calibrator(const Viewer &viewer, const Camera &camera){
      *  \brief Start the display part of the programm
      *
      *  This function ask the viewer to start the display of the calibration image
-     *  It wait for a keyboard event to either process the position of the camera, reset the chosen points of the calibation paper or stop the programm
+     *  It wait for a keyboard event to either process the position of the camera, reset the chosen points of the calibation paper or stop the software
      *
      */
 void Calibrator::launch_display(){

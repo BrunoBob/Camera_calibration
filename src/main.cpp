@@ -30,10 +30,11 @@ int main(int argc, char** argv){
         return -1;
     }
 
+    // Try to read image
     Mat image;
     image = imread(argv[1], 1);
     if (!image.data) {
-        printf("No image data \n");
+        printf("This image does not exist \n");
         return -1;
     }
 
@@ -45,8 +46,6 @@ int main(int argc, char** argv){
     Calibrator calibrator(viewer, camera);
 
     calibrator.launch_display();
-    //viewer.set_image(image);
-    //viewer.display_camera();
 
     return 0;
 }

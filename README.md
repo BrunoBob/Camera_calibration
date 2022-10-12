@@ -48,8 +48,17 @@ If you want to update the documentation you can regenerate it with the command :
 ## CI
 
 After each commit a github action will create a correct environment and it will try to compile the code and run the tests.  
-You can check the **Actions** of the depository too see the CI in more details.    
+You can check the **Actions** of the depository too see the CI in more details.  
+
+TO run the test manually you can run the following command :  
+
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ctest
 
 ## Future possible improvement
 
 * Function to compute the correct order of the corners so that the user can click on them in any order
+* Draw the X and Y real world axes on the window

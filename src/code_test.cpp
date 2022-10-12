@@ -1,23 +1,29 @@
-//#include <opencv2/opencv.hpp>
-//#include <stdio.h>
-//#include "Controller/camera.h"
+#include <opencv2/opencv.hpp>
+#include "Model/camera.h"
+#include "View/viewer.h"
+#include "Controller/calibrator.h"
 
 #include <gtest/gtest.h>
 
-//using namespace cv;
 
-TEST(HelloTest, BasicAssertions) {
-  // Expect two strings not to be equal.
-  EXPECT_STRNE("hello", "world");
-  // Expect equality.
-  EXPECT_EQ(7 * 6, 42);
+TEST(Camera_test, check_output_format) {
+  Camera camera;
+
+  // Test if Camera::get_intrisic_parameter() return the right format of cv::Mat
+  EXPECT_EQ(camera.get_intrisic_parameter().rows, 3);
+  EXPECT_EQ(camera.get_intrisic_parameter().cols, 3);
+
+  // Test if Camera::get_distorsion_parameter() return the right format of cv::Mat
+  EXPECT_EQ(camera.get_distorsion_parameter().rows, 1);
+  EXPECT_EQ(camera.get_distorsion_parameter().cols, 8);
+
+  // Test if Camera::get_world_point() return the right format of vector
+  EXPECT_EQ(camera.get_world_point().size(), 4);
 }
 
-/*int main(int argc, char** argv)
-{
-    Camera cametest;
-    
+TEST(Viewer_test, check_output_format) {
+  Viewer viewer;
 
-    
-    return 0;
-}*/
+  // Test if Viewer::get_corner_points() return the right format of vector
+  EXPECT_EQ(viewer.get_corner_points().size(), 4);
+}

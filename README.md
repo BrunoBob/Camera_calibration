@@ -26,7 +26,7 @@ To launch the programm you must type the command :
     
 Then you must select the corners of the calibration paper in the displayed window by clicking on them in a specific order.
  
-![corners_order](img/exemple.jpg "Order of corner selection")
+![corners_order](img/corner_order.jpg "Order of corner selection")
 
 If you want to compute the camera position : press the 'c' key on your keyboard.  
 If you want to reset the selected corners : press the 'r' key in your keyboard.  

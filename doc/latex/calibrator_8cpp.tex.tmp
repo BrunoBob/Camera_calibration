@@ -1,0 +1,33 @@
+\hypertarget{calibrator_8cpp}{}\doxysection{src/\+Controller/calibrator.cpp File Reference}
+\label{calibrator_8cpp}\index{src/Controller/calibrator.cpp@{src/Controller/calibrator.cpp}}
+
+
+Implemantation of the \mbox{\hyperlink{classCalibrator}{Calibrator}} class.  
+
+
+{\ttfamily \#include \char`\"{}calibrator.\+h\char`\"{}}\newline
+Include dependency graph for calibrator.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{calibrator_8cpp_aa808e450cdb0d1363920aa3e077e6cf4}\label{calibrator_8cpp_aa808e450cdb0d1363920aa3e077e6cf4}} 
+\#define {\bfseries C\+V\+\_\+\+C\+\_\+\+K\+EY}~99
+\item 
+\mbox{\Hypertarget{calibrator_8cpp_a4622ff4367c592ea53a29530b20b57c9}\label{calibrator_8cpp_a4622ff4367c592ea53a29530b20b57c9}} 
+\#define {\bfseries C\+V\+\_\+\+R\+\_\+\+K\+EY}~114
+\item 
+\mbox{\Hypertarget{calibrator_8cpp_ac5f21529b83fa3fc6df310885b3f462b}\label{calibrator_8cpp_ac5f21529b83fa3fc6df310885b3f462b}} 
+\#define {\bfseries C\+V\+\_\+\+E\+S\+C\+\_\+\+K\+EY}~27
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implemantation of the \mbox{\hyperlink{classCalibrator}{Calibrator}} class. 
+
+\begin{DoxyAuthor}{Author}
+Bruno Tessier 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}

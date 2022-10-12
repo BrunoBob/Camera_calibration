@@ -1,3 +1,11 @@
+/**
+ * \file viewer.h
+ * \brief Header of the viewer.cpp file
+ * \author Bruno Tessier
+ * \version 1.0
+ *
+ */
+
 #ifndef _VIEWER_CAMERA_
 #define _VIEWER_CAMERA_
 
@@ -5,12 +13,18 @@
 #include <stdio.h>
 using namespace cv;
 
+/*! \class Viewer
+   * \brief Class that manage the graphical part of the sofware
+   *
+   *  This class show the calibration picture and allow the user to select the four corners of the A4 calibration paper. 
+   *  Once the corners are selected it will display the border of the paper.
+   */
 class Viewer{
     private:
         Mat image_calibration;
         Mat original_image_calibration;
         int cpt_click;
-        std::vector<Point2i> checkBoard_corners;
+        std::vector<Point2f> checkBoard_corners;
         int test;
         //CornersSetHandler set_corners_event;
         //Calibrator *calibrator;
@@ -24,8 +38,7 @@ class Viewer{
         static void HandleClick(int event, int x, int y, int flags, void* ptr);
 
         void add_corner_point(int x, int y);
-        std::vector<Point2i> get_corner_points();
-        void get_corner_points(const int &test);
+        std::vector<Point2f> get_corner_points();
         void reset_corners_points();
 
         void draw_point(Point center);

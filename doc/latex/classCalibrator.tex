@@ -1,0 +1,67 @@
+\hypertarget{classCalibrator}{}\doxysection{Calibrator Class Reference}
+\label{classCalibrator}\index{Calibrator@{Calibrator}}
+
+
+Class that exchange with the \mbox{\hyperlink{classViewer}{Viewer}} and the Model (\mbox{\hyperlink{classCamera}{Camera}}) to compute the position of the camera.  
+
+
+
+
+{\ttfamily \#include $<$calibrator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCalibrator_a4b7acf29dab9d6d72e4c90f85b815071}{Calibrator}} (const \mbox{\hyperlink{classViewer}{Viewer}} \&viewer, const \mbox{\hyperlink{classCamera}{Camera}} \&camera)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCalibrator_a9f407b0992227029440dca58006942cc}{launch\+\_\+display}} ()
+\begin{DoxyCompactList}\small\item\em Start the display part of the programm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCalibrator_acd0c0a81131f19d5c2152e3bd3f44897}{calibration}} ()
+\begin{DoxyCompactList}\small\item\em Compute the position of the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that exchange with the \mbox{\hyperlink{classViewer}{Viewer}} and the Model (\mbox{\hyperlink{classCamera}{Camera}}) to compute the position of the camera. 
+
+This class exchange with a \mbox{\hyperlink{classViewer}{Viewer}} and a \mbox{\hyperlink{classCamera}{Camera}} object to take data necessary to compute the position of the camera 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCalibrator_a4b7acf29dab9d6d72e4c90f85b815071}\label{classCalibrator_a4b7acf29dab9d6d72e4c90f85b815071}} 
+\index{Calibrator@{Calibrator}!Calibrator@{Calibrator}}
+\index{Calibrator@{Calibrator}!Calibrator@{Calibrator}}
+\doxysubsubsection{\texorpdfstring{Calibrator()}{Calibrator()}}
+{\footnotesize\ttfamily Calibrator\+::\+Calibrator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classViewer}{Viewer}} \&}]{viewer,  }\item[{const \mbox{\hyperlink{classCamera}{Camera}} \&}]{camera }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor of the \mbox{\hyperlink{classCalibrator}{Calibrator}} class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCalibrator_acd0c0a81131f19d5c2152e3bd3f44897}\label{classCalibrator_acd0c0a81131f19d5c2152e3bd3f44897}} 
+\index{Calibrator@{Calibrator}!calibration@{calibration}}
+\index{calibration@{calibration}!Calibrator@{Calibrator}}
+\doxysubsubsection{\texorpdfstring{calibration()}{calibration()}}
+{\footnotesize\ttfamily void Calibrator\+::calibration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Compute the position of the camera. 
+
+Ask to the \mbox{\hyperlink{classViewer}{Viewer}} the position of the chosen calibration points and to the \mbox{\hyperlink{classCamera}{Camera}} the intrisic parameter end the distorsion of the camera Then it compute the position of the camera in the real world \mbox{\Hypertarget{classCalibrator_a9f407b0992227029440dca58006942cc}\label{classCalibrator_a9f407b0992227029440dca58006942cc}} 
+\index{Calibrator@{Calibrator}!launch\_display@{launch\_display}}
+\index{launch\_display@{launch\_display}!Calibrator@{Calibrator}}
+\doxysubsubsection{\texorpdfstring{launch\_display()}{launch\_display()}}
+{\footnotesize\ttfamily void Calibrator\+::launch\+\_\+display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the display part of the programm. 
+
+This function ask the viewer to start the display of the calibration image It wait for a keyboard event to either process the position of the camera, reset the chosen points of the calibation paper or stop the programm 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Controller/\mbox{\hyperlink{calibrator_8h}{calibrator.\+h}}\item 
+src/\+Controller/\mbox{\hyperlink{calibrator_8cpp}{calibrator.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,179 @@
+\hypertarget{classViewer}{}\doxysection{Viewer Class Reference}
+\label{classViewer}\index{Viewer@{Viewer}}
+
+
+Class that manage the graphical part of the sofware.  
+
+
+
+
+{\ttfamily \#include $<$viewer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classViewer_aaedebacb31cba87de6e7d448ed8d6586}{Viewer}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classViewer_a928493d21f1449561f475e5e36c5210d}{display\+\_\+camera}} ()
+\begin{DoxyCompactList}\small\item\em start the display of the image \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classViewer_a22ae2fa209f51900f2715aaf5c16baed}{set\+\_\+image}} (Mat image\+\_\+calibration)
+\begin{DoxyCompactList}\small\item\em Set the calibration image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classViewer_acd35613bd0f497cbf7cd02684de9f923}{add\+\_\+corner\+\_\+point}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Add a corner position. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point2f $>$ \mbox{\hyperlink{classViewer_a52a5268cfab59a97e565a028869c215a}{get\+\_\+corner\+\_\+points}} ()
+\begin{DoxyCompactList}\small\item\em Return the list of saved corners. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classViewer_aa6961e232bb3afbb98a9fb04664e2807}{reset\+\_\+corners\+\_\+points}} ()
+\begin{DoxyCompactList}\small\item\em Reset the chosen corners of the calibration paper. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classViewer_ace5ec49e8c153cb43a10ff049ce333a3}{draw\+\_\+point}} (Point center)
+\begin{DoxyCompactList}\small\item\em Draw a point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classViewer_a9a4dc9691d594c06e30fa165578121c4}{draw\+\_\+lines}} ()
+\begin{DoxyCompactList}\small\item\em Draw the contour of the selected calibration paper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classViewer_afbd94797e9e39069cc06a9bc771a1929}{Handle\+Click}} (int event, int x, int y, int flags, void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Handle function for a click event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that manage the graphical part of the sofware. 
+
+This class show the calibration picture and allow the user to select the four corners of the A4 calibration paper. Once the corners are selected it will display the border of the paper. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classViewer_aaedebacb31cba87de6e7d448ed8d6586}\label{classViewer_aaedebacb31cba87de6e7d448ed8d6586}} 
+\index{Viewer@{Viewer}!Viewer@{Viewer}}
+\index{Viewer@{Viewer}!Viewer@{Viewer}}
+\doxysubsubsection{\texorpdfstring{Viewer()}{Viewer()}}
+{\footnotesize\ttfamily Viewer\+::\+Viewer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor of the \mbox{\hyperlink{classViewer}{Viewer}} class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classViewer_acd35613bd0f497cbf7cd02684de9f923}\label{classViewer_acd35613bd0f497cbf7cd02684de9f923}} 
+\index{Viewer@{Viewer}!add\_corner\_point@{add\_corner\_point}}
+\index{add\_corner\_point@{add\_corner\_point}!Viewer@{Viewer}}
+\doxysubsubsection{\texorpdfstring{add\_corner\_point()}{add\_corner\_point()}}
+{\footnotesize\ttfamily void Viewer\+::add\+\_\+corner\+\_\+point (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Add a corner position. 
+
+Add the position of a chosen corner of the calibration paper to the list of saved corners
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: x position of the corner \\
+\hline
+{\em y} & \+: y position of the corner \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classViewer_a928493d21f1449561f475e5e36c5210d}\label{classViewer_a928493d21f1449561f475e5e36c5210d}} 
+\index{Viewer@{Viewer}!display\_camera@{display\_camera}}
+\index{display\_camera@{display\_camera}!Viewer@{Viewer}}
+\doxysubsubsection{\texorpdfstring{display\_camera()}{display\_camera()}}
+{\footnotesize\ttfamily void Viewer\+::display\+\_\+camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start the display of the image 
+
+Create an opencv window that display the calibration image \mbox{\Hypertarget{classViewer_a9a4dc9691d594c06e30fa165578121c4}\label{classViewer_a9a4dc9691d594c06e30fa165578121c4}} 
+\index{Viewer@{Viewer}!draw\_lines@{draw\_lines}}
+\index{draw\_lines@{draw\_lines}!Viewer@{Viewer}}
+\doxysubsubsection{\texorpdfstring{draw\_lines()}{draw\_lines()}}
+{\footnotesize\ttfamily void Viewer\+::draw\+\_\+lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draw the contour of the selected calibration paper. 
+
+Draw lines between the four selected corners of the selected calibration paper \mbox{\Hypertarget{classViewer_ace5ec49e8c153cb43a10ff049ce333a3}\label{classViewer_ace5ec49e8c153cb43a10ff049ce333a3}} 
+\index{Viewer@{Viewer}!draw\_point@{draw\_point}}
+\index{draw\_point@{draw\_point}!Viewer@{Viewer}}
+\doxysubsubsection{\texorpdfstring{draw\_point()}{draw\_point()}}
+{\footnotesize\ttfamily void Viewer\+::draw\+\_\+point (\begin{DoxyParamCaption}\item[{Point}]{center }\end{DoxyParamCaption})}
+
+
+
+Draw a point. 
+
+Draw a point where the user has clicked
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & \+: Center of the chosen point \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classViewer_a52a5268cfab59a97e565a028869c215a}\label{classViewer_a52a5268cfab59a97e565a028869c215a}} 
+\index{Viewer@{Viewer}!get\_corner\_points@{get\_corner\_points}}
+\index{get\_corner\_points@{get\_corner\_points}!Viewer@{Viewer}}
+\doxysubsubsection{\texorpdfstring{get\_corner\_points()}{get\_corner\_points()}}
+{\footnotesize\ttfamily std\+::vector$<$ Point2f $>$ Viewer\+::get\+\_\+corner\+\_\+points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the list of saved corners. 
+
+\begin{DoxyReturn}{Returns}
+The list of saved corners of the calibration paper 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classViewer_afbd94797e9e39069cc06a9bc771a1929}\label{classViewer_afbd94797e9e39069cc06a9bc771a1929}} 
+\index{Viewer@{Viewer}!HandleClick@{HandleClick}}
+\index{HandleClick@{HandleClick}!Viewer@{Viewer}}
+\doxysubsubsection{\texorpdfstring{HandleClick()}{HandleClick()}}
+{\footnotesize\ttfamily void Viewer\+::\+Handle\+Click (\begin{DoxyParamCaption}\item[{int}]{event,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{flags,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handle function for a click event. 
+
+This function is called for each mouse event in the opencv window If the event is a left click it will select the position of the mouse as one of the corner of the calibration paper.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \+: id of the mouse event \\
+\hline
+{\em x} & \+: X position of the mouse int the window \\
+\hline
+{\em y} & \+: Y position of the mouse int the window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classViewer_aa6961e232bb3afbb98a9fb04664e2807}\label{classViewer_aa6961e232bb3afbb98a9fb04664e2807}} 
+\index{Viewer@{Viewer}!reset\_corners\_points@{reset\_corners\_points}}
+\index{reset\_corners\_points@{reset\_corners\_points}!Viewer@{Viewer}}
+\doxysubsubsection{\texorpdfstring{reset\_corners\_points()}{reset\_corners\_points()}}
+{\footnotesize\ttfamily void Viewer\+::reset\+\_\+corners\+\_\+points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the chosen corners of the calibration paper. 
+
+Reset the list of saved corners of the calibration paper and refresh the window with a clean image \mbox{\Hypertarget{classViewer_a22ae2fa209f51900f2715aaf5c16baed}\label{classViewer_a22ae2fa209f51900f2715aaf5c16baed}} 
+\index{Viewer@{Viewer}!set\_image@{set\_image}}
+\index{set\_image@{set\_image}!Viewer@{Viewer}}
+\doxysubsubsection{\texorpdfstring{set\_image()}{set\_image()}}
+{\footnotesize\ttfamily void Viewer\+::set\+\_\+image (\begin{DoxyParamCaption}\item[{Mat}]{image\+\_\+calibration }\end{DoxyParamCaption})}
+
+
+
+Set the calibration image. 
+
+Set the calibration image that will be displayed in the window
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+calibration} & \+: Image chosen for the calibration \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+View/\mbox{\hyperlink{viewer_8h}{viewer.\+h}}\item 
+src/\+View/\mbox{\hyperlink{viewer_8cpp}{viewer.\+cpp}}\end{DoxyCompactItemize}

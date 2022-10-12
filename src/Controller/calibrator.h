@@ -1,3 +1,11 @@
+/**
+ * \file calibrator.h
+ * \brief Header of the calibrator.cpp file
+ * \author Bruno Tessier
+ * \version 1.0
+ *
+ */
+
 #ifndef _CONTROLLER_CAMERA_
 #define _CONTROLLER_CAMERA_
 
@@ -8,6 +16,11 @@
 
 using namespace cv;
 
+/*! \class Calibrator
+   * \brief Class that exchange with the Viewer and the Model (Camera) to compute the position of the camera
+   *
+   *  This class exchange with a Viewer and a Camera object to take data necessary to compute the position of the camera
+   */
 class Calibrator{
     private:
         Viewer viewer;
@@ -17,9 +30,6 @@ class Calibrator{
         Calibrator(const Viewer &viewer, const Camera &camera);
         
         void launch_display();
-        void launch_calibration();
-        int check_corners();
-        std::vector<Point2i> setup_corners(std::vector<Point2i> corners);
         void calibration();
         
 };

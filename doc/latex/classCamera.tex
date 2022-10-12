@@ -1,0 +1,88 @@
+\hypertarget{classCamera}{}\doxysection{Camera Class Reference}
+\label{classCamera}\index{Camera@{Camera}}
+
+
+Class that manage the data of the software.  
+
+
+
+
+{\ttfamily \#include $<$camera.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCamera_a01f94c3543f56ede7af49dc778f19331}{Camera}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+Mat \mbox{\hyperlink{classCamera_a61c4b195ba03345b8bd43be51d7ccdb7}{get\+\_\+intrisic\+\_\+parameter}} ()
+\begin{DoxyCompactList}\small\item\em Return a matrix of the intrisic parameter of the camera. \end{DoxyCompactList}\item 
+Mat \mbox{\hyperlink{classCamera_a28ae4c6a75ec05f23a3470e53eed1d15}{get\+\_\+distorsion\+\_\+parameter}} ()
+\begin{DoxyCompactList}\small\item\em Return a matrix of the distorsion parameter of the camera. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point3f $>$ \mbox{\hyperlink{classCamera_a4b9c0ada00a2212fcc496d25efdb1130}{get\+\_\+world\+\_\+point}} ()
+\begin{DoxyCompactList}\small\item\em Return a list of world coordinate points of the A4 calibration paper in the calibration image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that manage the data of the software. 
+
+This class can give stored data to the controller (\mbox{\hyperlink{classCalibrator}{Calibrator}}) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCamera_a01f94c3543f56ede7af49dc778f19331}\label{classCamera_a01f94c3543f56ede7af49dc778f19331}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor of the \mbox{\hyperlink{classCamera}{Camera}} class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCamera_a28ae4c6a75ec05f23a3470e53eed1d15}\label{classCamera_a28ae4c6a75ec05f23a3470e53eed1d15}} 
+\index{Camera@{Camera}!get\_distorsion\_parameter@{get\_distorsion\_parameter}}
+\index{get\_distorsion\_parameter@{get\_distorsion\_parameter}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{get\_distorsion\_parameter()}{get\_distorsion\_parameter()}}
+{\footnotesize\ttfamily Mat Camera\+::get\+\_\+distorsion\+\_\+parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return a matrix of the distorsion parameter of the camera. 
+
+\begin{DoxyReturn}{Returns}
+The distorsion parameter of the camera 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_a61c4b195ba03345b8bd43be51d7ccdb7}\label{classCamera_a61c4b195ba03345b8bd43be51d7ccdb7}} 
+\index{Camera@{Camera}!get\_intrisic\_parameter@{get\_intrisic\_parameter}}
+\index{get\_intrisic\_parameter@{get\_intrisic\_parameter}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{get\_intrisic\_parameter()}{get\_intrisic\_parameter()}}
+{\footnotesize\ttfamily Mat Camera\+::get\+\_\+intrisic\+\_\+parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return a matrix of the intrisic parameter of the camera. 
+
+\begin{DoxyReturn}{Returns}
+The instrisic parameter of the camera 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_a4b9c0ada00a2212fcc496d25efdb1130}\label{classCamera_a4b9c0ada00a2212fcc496d25efdb1130}} 
+\index{Camera@{Camera}!get\_world\_point@{get\_world\_point}}
+\index{get\_world\_point@{get\_world\_point}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{get\_world\_point()}{get\_world\_point()}}
+{\footnotesize\ttfamily std\+::vector$<$ Point3f $>$ Camera\+::get\+\_\+world\+\_\+point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return a list of world coordinate points of the A4 calibration paper in the calibration image. 
+
+\begin{DoxyReturn}{Returns}
+A vector of 3D world coordinates 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/\mbox{\hyperlink{camera_8h}{camera.\+h}}\item 
+src/\+Model/\mbox{\hyperlink{camera_8cpp}{camera.\+cpp}}\end{DoxyCompactItemize}
